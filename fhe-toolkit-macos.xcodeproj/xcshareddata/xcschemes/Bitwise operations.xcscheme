@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "897C41E32AA3847B00945609"
+               BlueprintIdentifier = "897C45802AA3A2B700945609"
                BuildableName = "Bitwise operations.app"
                BlueprintName = "Bitwise operations"
                ReferencedContainer = "container:fhe-toolkit-macos.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "897C41E32AA3847B00945609"
+            BlueprintIdentifier = "897C45802AA3A2B700945609"
             BuildableName = "Bitwise operations.app"
             BlueprintName = "Bitwise operations"
             ReferencedContainer = "container:fhe-toolkit-macos.xcodeproj">
@@ -61,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "897C41E32AA3847B00945609"
+            BlueprintIdentifier = "897C45802AA3A2B700945609"
             BuildableName = "Bitwise operations.app"
             BlueprintName = "Bitwise operations"
             ReferencedContainer = "container:fhe-toolkit-macos.xcodeproj">

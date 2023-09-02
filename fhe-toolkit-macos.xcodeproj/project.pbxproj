@@ -7,11 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		897C41E82AA3847B00945609 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 897C41E72AA3847B00945609 /* AppDelegate.m */; };
-		897C41EB2AA3847B00945609 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 897C41EA2AA3847B00945609 /* ViewController.mm */; };
-		897C41ED2AA3847F00945609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 897C41EC2AA3847F00945609 /* Assets.xcassets */; };
-		897C41F02AA3847F00945609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897C41EE2AA3847F00945609 /* Main.storyboard */; };
-		897C41F32AA3847F00945609 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 897C41F22AA3847F00945609 /* main.m */; };
+		897C45832AA3A2B700945609 /* HelibCkksEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E0525D1EA8D0063303B /* HelibCkksEncoder.cpp */; };
+		897C45842AA3A2B700945609 /* AbstractEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E8625D1EC880063303B /* AbstractEncoder.cpp */; };
+		897C45852AA3A2B700945609 /* NativeFunctionEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151D7525D1E9910063303B /* NativeFunctionEvaluator.cpp */; };
+		897C45862AA3A2B700945609 /* HelibBgvCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151DFE25D1EA820063303B /* HelibBgvCiphertext.cpp */; };
+		897C45872AA3A2B700945609 /* BitwiseEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151D7A25D1E9910063303B /* BitwiseEvaluator.cpp */; };
+		897C45882AA3A2B700945609 /* HelibBgvContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A513E02825CCA0B80066A3BA /* HelibBgvContext.cpp */; };
+		897C45892AA3A2B700945609 /* HelibCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E0725D1EA8D0063303B /* HelibCiphertext.cpp */; };
+		897C458A2AA3A2B700945609 /* HeContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151D7925D1E9910063303B /* HeContext.cpp */; };
+		897C458B2AA3A2B700945609 /* HeTraits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151D7B25D1E9910063303B /* HeTraits.cpp */; };
+		897C458D2AA3A2B700945609 /* AbstractPlaintext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E8725D1EC880063303B /* AbstractPlaintext.cpp */; };
+		897C458E2AA3A2B700945609 /* HelibConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E0B25D1EA8D0063303B /* HelibConfig.cpp */; };
+		897C458F2AA3A2B700945609 /* AlwaysAssert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151D7D25D1E9910063303B /* AlwaysAssert.cpp */; };
+		897C45902AA3A2B700945609 /* BinIoUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151EFB25D1ED620063303B /* BinIoUtils.cpp */; };
+		897C45912AA3A2B700945609 /* HelibContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E0C25D1EA8D0063303B /* HelibContext.cpp */; };
+		897C45922AA3A2B700945609 /* JsonSubtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151EF825D1ED620063303B /* JsonSubtree.cpp */; };
+		897C45932AA3A2B700945609 /* JsonWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151EFD25D1ED620063303B /* JsonWrapper.cpp */; };
+		897C45942AA3A2B700945609 /* HelayersTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151D7725D1E9910063303B /* HelayersTimer.cpp */; };
+		897C45962AA3A2B700945609 /* CTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151D7E25D1E9910063303B /* CTile.cpp */; };
+		897C45972AA3A2B700945609 /* HelibCkksCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E1225D1EA8E0063303B /* HelibCkksCiphertext.cpp */; };
+		897C45982AA3A2B700945609 /* PTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151D8025D1E9910063303B /* PTile.cpp */; };
+		897C45992AA3A2B700945609 /* HelibCkksContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E1325D1EA8E0063303B /* HelibCkksContext.cpp */; };
+		897C459B2AA3A2B700945609 /* HelibBgvPlaintext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E1025D1EA8E0063303B /* HelibBgvPlaintext.cpp */; };
+		897C459C2AA3A2B700945609 /* HelibBgvNativeFunctionEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151DFA25D1EA820063303B /* HelibBgvNativeFunctionEvaluator.cpp */; };
+		897C459E2AA3A2B700945609 /* HelibBgvEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151DFB25D1EA820063303B /* HelibBgvEncoder.cpp */; };
+		897C459F2AA3A2B700945609 /* Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151D7C25D1E9910063303B /* Encoder.cpp */; };
+		897C45A02AA3A2B700945609 /* HelayersConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151EFC25D1ED620063303B /* HelayersConfig.cpp */; };
+		897C45A12AA3A2B700945609 /* AbstractCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E8825D1EC880063303B /* AbstractCiphertext.cpp */; };
+		897C45A32AA3A2B700945609 /* AbstractFunctionEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E8525D1EC880063303B /* AbstractFunctionEvaluator.cpp */; };
+		897C45A42AA3A2B700945609 /* FileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151D8125D1E9910063303B /* FileUtils.cpp */; };
+		897C45A52AA3A2B700945609 /* HelibCkksPlaintext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E0925D1EA8D0063303B /* HelibCkksPlaintext.cpp */; };
+		897C45A62AA3A2B700945609 /* Saveable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A56A6D3C25FFB2EA00773807 /* Saveable.cpp */; };
+		897C45A82AA3A2B700945609 /* libboost_filesystem.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
+		897C45A92AA3A2B700945609 /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CDB49425CDF08300EC929D /* libhelib.a */; };
+		897C45AA2AA3A2B700945609 /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
+		897C45AB2AA3A2B700945609 /* libgmp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CB244F73380087514D /* libgmp.dylib */; };
+		897C45AC2AA3A2B700945609 /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
+		897C45AE2AA3A2B700945609 /* dir in Resources */ = {isa = PBXBuildFile; fileRef = A5F649D2244F73380087514D /* dir */; };
+		897C45B02AA3A2B700945609 /* gmp.info-2 in Resources */ = {isa = PBXBuildFile; fileRef = A5F649D1244F73380087514D /* gmp.info-2 */; };
+		897C45B22AA3A2B700945609 /* gmp.info-1 in Resources */ = {isa = PBXBuildFile; fileRef = A5F649CF244F73380087514D /* gmp.info-1 */; };
+		897C45B32AA3A2B700945609 /* gmp.info in Resources */ = {isa = PBXBuildFile; fileRef = A5F649D0244F73380087514D /* gmp.info */; };
+		897C45B42AA3A2B700945609 /* libgmp.la in Resources */ = {isa = PBXBuildFile; fileRef = A5F649CC244F73380087514D /* libgmp.la */; };
+		897C45B52AA3A2B700945609 /* countries_dataset.csv in Resources */ = {isa = PBXBuildFile; fileRef = A58BF5C225D34F3F002A8A89 /* countries_dataset.csv */; };
+		897C45B72AA3A2B700945609 /* libboost_filesystem.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
+		897C45BD2AA3A5A400945609 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 897C41E72AA3847B00945609 /* AppDelegate.m */; };
+		897C45BE2AA3A5A600945609 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 897C41EA2AA3847B00945609 /* ViewController.mm */; };
+		897C45BF2AA3A5A900945609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 897C41EC2AA3847F00945609 /* Assets.xcassets */; };
+		897C45C02AA3A5AC00945609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897C41EE2AA3847F00945609 /* Main.storyboard */; };
+		897C45C12AA3A5AF00945609 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 897C41F22AA3847F00945609 /* main.m */; };
 		A50693E524C7298500FFF08B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A50693E424C7298500FFF08B /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A50693EA24C7298A00FFF08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50693E924C7298A00FFF08B /* Assets.xcassets */; };
 		A50693ED24C7298A00FFF08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50693EB24C7298A00FFF08B /* Main.storyboard */; };
@@ -150,6 +193,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		897C45B62AA3A2B700945609 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				897C45B72AA3A2B700945609 /* libboost_filesystem.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5151F0625D1EDA70063303B /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,7 +229,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		897C41E42AA3847B00945609 /* Bitwise operations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitwise operations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		897C41E62AA3847B00945609 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		897C41E72AA3847B00945609 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		897C41E92AA3847B00945609 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -185,6 +238,7 @@
 		897C41F12AA3847F00945609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		897C41F22AA3847F00945609 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		897C41F42AA3847F00945609 /* Bitwise_operations.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bitwise_operations.entitlements; sourceTree = "<group>"; };
+		897C45BB2AA3A2B700945609 /* Bitwise operations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitwise operations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50693E124C7298500FFF08B /* Credit Card Fraud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Credit Card Fraud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50693E324C7298500FFF08B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A50693E424C7298500FFF08B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -576,10 +630,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		897C41E12AA3847B00945609 /* Frameworks */ = {
+		897C45A72AA3A2B700945609 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				897C45A82AA3A2B700945609 /* libboost_filesystem.dylib in Frameworks */,
+				897C45A92AA3A2B700945609 /* libhelib.a in Frameworks */,
+				897C45AA2AA3A2B700945609 /* libgmp.a in Frameworks */,
+				897C45AB2AA3A2B700945609 /* libgmp.dylib in Frameworks */,
+				897C45AC2AA3A2B700945609 /* ntl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,7 +830,7 @@
 				A50693E124C7298500FFF08B /* Credit Card Fraud.app */,
 				A5ABC99D25ED4B9500E07297 /* PrivacyPreservingSearchTests.xctest */,
 				A5ABC9B025ED982200E07297 /* CreditCardFraudTests.xctest */,
-				897C41E42AA3847B00945609 /* Bitwise operations.app */,
+				897C45BB2AA3A2B700945609 /* Bitwise operations.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -780,7 +839,6 @@
 			isa = PBXGroup;
 			children = (
 				A58BF5C125D34ACF002A8A89 /* data */,
-				A513E00A25CC8C460066A3BA /* helayers */,
 				A5D0073724DB330900AAE351 /* README.md */,
 				A5667A0023F714CF00F122FD /* AppDelegate.h */,
 				A5667A0123F714CF00F122FD /* AppDelegate.m */,
@@ -788,6 +846,7 @@
 				A5F649C6244F73380087514D /* gmplib-so-macosx-x86_64 */,
 				A5F64953244F726F0087514D /* ntl */,
 				A5F64920244F711D0087514D /* include */,
+				A513E00A25CC8C460066A3BA /* helayers */,
 				A5667A0623F714D200F122FD /* Assets.xcassets */,
 				A5667A0823F714D200F122FD /* Main.storyboard */,
 				A5667A0B23F714D200F122FD /* Info.plist */,
@@ -1309,21 +1368,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		897C41E32AA3847B00945609 /* Bitwise operations */ = {
+		897C45802AA3A2B700945609 /* Bitwise operations */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 897C41F72AA3847F00945609 /* Build configuration list for PBXNativeTarget "Bitwise operations" */;
+			buildConfigurationList = 897C45B82AA3A2B700945609 /* Build configuration list for PBXNativeTarget "Bitwise operations" */;
 			buildPhases = (
-				897C41E02AA3847B00945609 /* Sources */,
-				897C41E12AA3847B00945609 /* Frameworks */,
-				897C41E22AA3847B00945609 /* Resources */,
+				897C45812AA3A2B700945609 /* Sources */,
+				897C45A72AA3A2B700945609 /* Frameworks */,
+				897C45AD2AA3A2B700945609 /* Resources */,
+				897C45B62AA3A2B700945609 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Bitwise operations";
-			productName = "Bitwise operations";
-			productReference = 897C41E42AA3847B00945609 /* Bitwise operations.app */;
+			productName = Morphic;
+			productReference = 897C45BB2AA3A2B700945609 /* Bitwise operations.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A50693E024C7298500FFF08B /* Credit Card Fraud */ = {
@@ -1407,9 +1467,6 @@
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = IBM;
 				TargetAttributes = {
-					897C41E32AA3847B00945609 = {
-						CreatedOnToolsVersion = 11.7;
-					};
 					A50693E024C7298500FFF08B = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -1443,18 +1500,24 @@
 				A50693E024C7298500FFF08B /* Credit Card Fraud */,
 				A5ABC99C25ED4B9500E07297 /* PrivacyPreservingSearchTests */,
 				A5ABC9AF25ED982200E07297 /* CreditCardFraudTests */,
-				897C41E32AA3847B00945609 /* Bitwise operations */,
+				897C45802AA3A2B700945609 /* Bitwise operations */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		897C41E22AA3847B00945609 /* Resources */ = {
+		897C45AD2AA3A2B700945609 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				897C41ED2AA3847F00945609 /* Assets.xcassets in Resources */,
-				897C41F02AA3847F00945609 /* Main.storyboard in Resources */,
+				897C45AE2AA3A2B700945609 /* dir in Resources */,
+				897C45C02AA3A5AC00945609 /* Main.storyboard in Resources */,
+				897C45B02AA3A2B700945609 /* gmp.info-2 in Resources */,
+				897C45B22AA3A2B700945609 /* gmp.info-1 in Resources */,
+				897C45B32AA3A2B700945609 /* gmp.info in Resources */,
+				897C45B42AA3A2B700945609 /* libgmp.la in Resources */,
+				897C45BF2AA3A5A900945609 /* Assets.xcassets in Resources */,
+				897C45B52AA3A2B700945609 /* countries_dataset.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1503,13 +1566,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		897C41E02AA3847B00945609 /* Sources */ = {
+		897C45812AA3A2B700945609 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				897C41EB2AA3847B00945609 /* ViewController.mm in Sources */,
-				897C41F32AA3847F00945609 /* main.m in Sources */,
-				897C41E82AA3847B00945609 /* AppDelegate.m in Sources */,
+				897C45832AA3A2B700945609 /* HelibCkksEncoder.cpp in Sources */,
+				897C45842AA3A2B700945609 /* AbstractEncoder.cpp in Sources */,
+				897C45852AA3A2B700945609 /* NativeFunctionEvaluator.cpp in Sources */,
+				897C45862AA3A2B700945609 /* HelibBgvCiphertext.cpp in Sources */,
+				897C45872AA3A2B700945609 /* BitwiseEvaluator.cpp in Sources */,
+				897C45882AA3A2B700945609 /* HelibBgvContext.cpp in Sources */,
+				897C45892AA3A2B700945609 /* HelibCiphertext.cpp in Sources */,
+				897C45BE2AA3A5A600945609 /* ViewController.mm in Sources */,
+				897C458A2AA3A2B700945609 /* HeContext.cpp in Sources */,
+				897C458B2AA3A2B700945609 /* HeTraits.cpp in Sources */,
+				897C458D2AA3A2B700945609 /* AbstractPlaintext.cpp in Sources */,
+				897C458E2AA3A2B700945609 /* HelibConfig.cpp in Sources */,
+				897C45C12AA3A5AF00945609 /* main.m in Sources */,
+				897C458F2AA3A2B700945609 /* AlwaysAssert.cpp in Sources */,
+				897C45902AA3A2B700945609 /* BinIoUtils.cpp in Sources */,
+				897C45912AA3A2B700945609 /* HelibContext.cpp in Sources */,
+				897C45922AA3A2B700945609 /* JsonSubtree.cpp in Sources */,
+				897C45932AA3A2B700945609 /* JsonWrapper.cpp in Sources */,
+				897C45942AA3A2B700945609 /* HelayersTimer.cpp in Sources */,
+				897C45962AA3A2B700945609 /* CTile.cpp in Sources */,
+				897C45972AA3A2B700945609 /* HelibCkksCiphertext.cpp in Sources */,
+				897C45982AA3A2B700945609 /* PTile.cpp in Sources */,
+				897C45992AA3A2B700945609 /* HelibCkksContext.cpp in Sources */,
+				897C459B2AA3A2B700945609 /* HelibBgvPlaintext.cpp in Sources */,
+				897C45BD2AA3A5A400945609 /* AppDelegate.m in Sources */,
+				897C459C2AA3A2B700945609 /* HelibBgvNativeFunctionEvaluator.cpp in Sources */,
+				897C459E2AA3A2B700945609 /* HelibBgvEncoder.cpp in Sources */,
+				897C459F2AA3A2B700945609 /* Encoder.cpp in Sources */,
+				897C45A02AA3A2B700945609 /* HelayersConfig.cpp in Sources */,
+				897C45A12AA3A2B700945609 /* AbstractCiphertext.cpp in Sources */,
+				897C45A32AA3A2B700945609 /* AbstractFunctionEvaluator.cpp in Sources */,
+				897C45A42AA3A2B700945609 /* FileUtils.cpp in Sources */,
+				897C45A52AA3A2B700945609 /* HelibCkksPlaintext.cpp in Sources */,
+				897C45A62AA3A2B700945609 /* Saveable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1675,39 +1769,114 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		897C41F52AA3847F00945609 /* Debug */ = {
+		897C45B92AA3A2B700945609 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_USE_AFTER_MOVE = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CODE_SIGN_ENTITLEMENTS = "Bitwise operations/Bitwise_operations.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/HElib_macOS/src",
+					"$(PROJECT_DIR)/dependencies/HElib/include",
+					"$(PROJECT_DIR)/dependencies/HElib/dependencies/json",
+				);
 				INFOPLIST_FILE = "Bitwise operations/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "test.Bitwise-operations";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dependencies/ntl/libs",
+					"$(PROJECT_DIR)/dependencies/gmplib-so-macosx-x86_64/lib",
+					"$(PROJECT_DIR)/dependencies/HElib_macOS/lib/Debug",
+					"$(PROJECT_DIR)/dependencies/lib",
+				);
+				OTHER_CFLAGS = "-fPIC";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.bitwise-operations.fhe-toolkit-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/include",
+					"$(PROJECT_DIR)/\"Privacy Preserving Search\"/**",
+					"$(PROJECT_DIR)/dependencies/ntl/include",
+				);
 			};
 			name = Debug;
 		};
-		897C41F62AA3847F00945609 /* Release */ = {
+		897C45BA2AA3A2B700945609 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_USE_AFTER_MOVE = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CODE_SIGN_ENTITLEMENTS = "Bitwise operations/Bitwise_operations.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/HElib_macOS/src",
+					"$(PROJECT_DIR)/dependencies/HElib/include",
+					"$(PROJECT_DIR)/dependencies/HElib/dependencies/json",
+				);
 				INFOPLIST_FILE = "Bitwise operations/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "test.Bitwise-operations";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dependencies/ntl/libs",
+					"$(PROJECT_DIR)/dependencies/gmplib-so-macosx-x86_64/lib",
+					"$(PROJECT_DIR)/dependencies/HElib_macOS/lib/Debug",
+					"$(PROJECT_DIR)/dependencies/lib",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-fPIC";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.bitwise-operations.fhe-toolkit-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/include",
+					"$(PROJECT_DIR)/\"Privacy Preserving Search\"/**",
+					"$(PROJECT_DIR)/dependencies/ntl/include",
+				);
 			};
 			name = Release;
 		};
@@ -2133,11 +2302,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		897C41F72AA3847F00945609 /* Build configuration list for PBXNativeTarget "Bitwise operations" */ = {
+		897C45B82AA3A2B700945609 /* Build configuration list for PBXNativeTarget "Bitwise operations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				897C41F52AA3847F00945609 /* Debug */,
-				897C41F62AA3847F00945609 /* Release */,
+				897C45B92AA3A2B700945609 /* Debug */,
+				897C45BA2AA3A2B700945609 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
