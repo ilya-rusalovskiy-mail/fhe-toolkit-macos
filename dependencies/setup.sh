@@ -211,7 +211,7 @@ build_boost()
     {
         CURRENT_DIR=`pwd`
         if [ ! -s ${CURRENT_DIR}/boost_1_72_0.tar.gz ]; then
-            curl -k -L -o ${CURRENT_DIR}/boost_1_72_0.tar.gz "https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz"
+            curl -k -L -o ${CURRENT_DIR}/boost_1_72_0.tar.gz "https://boostorg.jfrog.io/artifactory/main/release/1.72.0/source/boost_1_72_0.tar.gz"
         fi
         tar xvzf "boost_${BOOST_VERSION}.tar.gz"
     }
