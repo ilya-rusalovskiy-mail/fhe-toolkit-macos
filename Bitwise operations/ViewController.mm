@@ -56,11 +56,11 @@ unsigned long debug = 1;
 }
 
 - (void)bitwiseSumm {
-    long left = 10;
-    long right = 5;
+    long left = 120;
+    long right = -5;
     
-    std::vector<int> leftBits{0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0};
-    std::vector<int> rightBits{0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1};
+    std::vector<int> leftBits{0,1,1,1,1,0,0,0};
+    std::vector<int> rightBits{1,1,1,1,1,0,1,1};
     
     // set NTL Thread pool size
     if (nthreads > 1) {
@@ -105,16 +105,55 @@ unsigned long debug = 1;
         encRightBits.push_back(encryptedBit);
     }
     
-    for(int i = 0; i < encLeftBits.size(); i++) {
-        encLeftBits[i].add(encRightBits[i]);
+    CTile f(he);
+    // TODO: use 0 for ADD and 1 for DIFF
+    encoder.encodeEncrypt(f, vector<int>{0});
+    CTile a(he);
+    CTile b(he);
+    CTile p = f;
+    
+    CTile overflowBit(he);
+    vector<CTile> result;
+    for(int i = int(encLeftBits.size()) - 1; i >= 0; i--) {
+        // initial setup
+        a = encLeftBits[i];
+        b = encRightBits[i];
+        b.add(f);
+        
+        // XOR-AND single bit adder
+        CTile aXorB = a;
+        aXorB.add(b);
+        
+        CTile aAndB = a;
+        aAndB.multiply(b);
+        
+        CTile c = aXorB;
+        c.add(p);
+        // result bit
+        result.push_back(c);
+        
+        aXorB.multiply(p);
+        aXorB.add(aAndB);
+        if (i == 0) {
+            // last iteration - iteration over sign bits
+            // calculate overflow bit
+            // ref: https://www.geeksforgeeks.org/overflow-in-arithmetic-addition-in-binary-number-system/
+            overflowBit = p;
+            overflowBit.add(aXorB);
+        }
+        // carry bit
+        p = aXorB;
     }
+    reverse(result.begin(), result.end());
     
     NSMutableArray *resultArray = [NSMutableArray new];
-    for (const auto& res : encLeftBits) {
+    for (const auto& res : result) {
         int resultBit = encoder.decryptDecodeInt(res)[0];
         [resultArray addObject:@(resultBit)];
     }
-    NSLog(@"Operation result is: %@", resultArray);
+    
+    int overflow = encoder.decryptDecodeInt(overflowBit)[0];
+    NSLog(@"Operation result.\nNumber: [%@].\nOverflow bit: %@", [resultArray componentsJoinedByString:@""], @(overflow));
 }
 
 
