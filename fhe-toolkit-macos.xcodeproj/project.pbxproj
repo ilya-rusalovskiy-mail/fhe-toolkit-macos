@@ -55,6 +55,8 @@
 		897C45BF2AA3A5A900945609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 897C41EC2AA3847F00945609 /* Assets.xcassets */; };
 		897C45C02AA3A5AC00945609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897C41EE2AA3847F00945609 /* Main.storyboard */; };
 		897C45C12AA3A5AF00945609 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 897C41F22AA3847F00945609 /* main.m */; };
+		89FF1C4C2AAA76410026081D /* FHEManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89FF1C4B2AAA76410026081D /* FHEManager.mm */; };
+		89FF1C512AAE7A070026081D /* FHEBitwiseObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89FF1C502AAE7A070026081D /* FHEBitwiseObject.mm */; };
 		A50693E524C7298500FFF08B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A50693E424C7298500FFF08B /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A50693EA24C7298A00FFF08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50693E924C7298A00FFF08B /* Assets.xcassets */; };
 		A50693ED24C7298A00FFF08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50693EB24C7298A00FFF08B /* Main.storyboard */; };
@@ -239,6 +241,10 @@
 		897C41F22AA3847F00945609 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		897C41F42AA3847F00945609 /* Bitwise_operations.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bitwise_operations.entitlements; sourceTree = "<group>"; };
 		897C45BB2AA3A2B700945609 /* Bitwise operations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitwise operations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89FF1C4B2AAA76410026081D /* FHEManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FHEManager.mm; sourceTree = "<group>"; };
+		89FF1C4D2AAA76580026081D /* FHEManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FHEManager.h; sourceTree = "<group>"; };
+		89FF1C4F2AAE7A070026081D /* FHEBitwiseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FHEBitwiseObject.h; sourceTree = "<group>"; };
+		89FF1C502AAE7A070026081D /* FHEBitwiseObject.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FHEBitwiseObject.mm; sourceTree = "<group>"; };
 		A50693E124C7298500FFF08B /* Credit Card Fraud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Credit Card Fraud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50693E324C7298500FFF08B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A50693E424C7298500FFF08B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -687,6 +693,7 @@
 		897C41E52AA3847B00945609 /* Bitwise operations */ = {
 			isa = PBXGroup;
 			children = (
+				89FF1C4E2AAA76620026081D /* Manager */,
 				897C41E62AA3847B00945609 /* AppDelegate.h */,
 				897C41E72AA3847B00945609 /* AppDelegate.m */,
 				897C41E92AA3847B00945609 /* ViewController.h */,
@@ -698,6 +705,17 @@
 				897C41F42AA3847F00945609 /* Bitwise_operations.entitlements */,
 			);
 			path = "Bitwise operations";
+			sourceTree = "<group>";
+		};
+		89FF1C4E2AAA76620026081D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				89FF1C4D2AAA76580026081D /* FHEManager.h */,
+				89FF1C4B2AAA76410026081D /* FHEManager.mm */,
+				89FF1C4F2AAE7A070026081D /* FHEBitwiseObject.h */,
+				89FF1C502AAE7A070026081D /* FHEBitwiseObject.mm */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		A50693E224C7298500FFF08B /* Credit Card Fraud */ = {
@@ -1576,6 +1594,7 @@
 				897C45862AA3A2B700945609 /* HelibBgvCiphertext.cpp in Sources */,
 				897C45872AA3A2B700945609 /* BitwiseEvaluator.cpp in Sources */,
 				897C45882AA3A2B700945609 /* HelibBgvContext.cpp in Sources */,
+				89FF1C4C2AAA76410026081D /* FHEManager.mm in Sources */,
 				897C45892AA3A2B700945609 /* HelibCiphertext.cpp in Sources */,
 				897C45BE2AA3A5A600945609 /* ViewController.mm in Sources */,
 				897C458A2AA3A2B700945609 /* HeContext.cpp in Sources */,
@@ -1595,6 +1614,7 @@
 				897C45992AA3A2B700945609 /* HelibCkksContext.cpp in Sources */,
 				897C459B2AA3A2B700945609 /* HelibBgvPlaintext.cpp in Sources */,
 				897C45BD2AA3A5A400945609 /* AppDelegate.m in Sources */,
+				89FF1C512AAE7A070026081D /* FHEBitwiseObject.mm in Sources */,
 				897C459C2AA3A2B700945609 /* HelibBgvNativeFunctionEvaluator.cpp in Sources */,
 				897C459E2AA3A2B700945609 /* HelibBgvEncoder.cpp in Sources */,
 				897C459F2AA3A2B700945609 /* Encoder.cpp in Sources */,
