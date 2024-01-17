@@ -43,11 +43,30 @@ using namespace std;
     return encryptedBits;
 }
 
+- (void)multiplyWithOther:(FHEBitwiseObject *)other {
+    //b-1 = 0
+    //bit = bi xor bi-1
+    //self AND bit
+    // f = (bi xor bi-1) AND bi
+    
+}
+
+- (void)divideByOther:(FHEBitwiseObject *)other {
+    
+}
+
+- (void)diffOther:(FHEBitwiseObject *)other {
+    [self summOrDiffWithOther:other mode:1];
+}
+
 - (void)summWithOther:(FHEBitwiseObject *)other {
+    [self summOrDiffWithOther:other mode:0];
+}
+
+- (void)summOrDiffWithOther:(FHEBitwiseObject *)other mode:(int)mode {
     Encoder encoder(*[self getHe]);
-    // TODO: use 0 for ADD and 1 for DIFF
     CTile f(*[self getHe]);
-    encoder.encodeEncrypt(f, vector<int>{0});
+    encoder.encodeEncrypt(f, vector<int>{mode});
     CTile a(*[self getHe]);
     CTile b(*[self getHe]);
     CTile p = f;

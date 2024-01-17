@@ -57,6 +57,7 @@
 		897C45C12AA3A5AF00945609 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 897C41F22AA3847F00945609 /* main.m */; };
 		89FF1C4C2AAA76410026081D /* FHEManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89FF1C4B2AAA76410026081D /* FHEManager.mm */; };
 		89FF1C512AAE7A070026081D /* FHEBitwiseObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89FF1C502AAE7A070026081D /* FHEBitwiseObject.mm */; };
+		89FF1C662AFC71300026081D /* NSNumber+ConvenienceAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FF1C652AFC71300026081D /* NSNumber+ConvenienceAdditions.swift */; };
 		A50693E524C7298500FFF08B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A50693E424C7298500FFF08B /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A50693EA24C7298A00FFF08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50693E924C7298A00FFF08B /* Assets.xcassets */; };
 		A50693ED24C7298A00FFF08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50693EB24C7298A00FFF08B /* Main.storyboard */; };
@@ -245,6 +246,8 @@
 		89FF1C4D2AAA76580026081D /* FHEManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FHEManager.h; sourceTree = "<group>"; };
 		89FF1C4F2AAE7A070026081D /* FHEBitwiseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FHEBitwiseObject.h; sourceTree = "<group>"; };
 		89FF1C502AAE7A070026081D /* FHEBitwiseObject.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FHEBitwiseObject.mm; sourceTree = "<group>"; };
+		89FF1C642AFC71300026081D /* Bitwise operations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bitwise operations-Bridging-Header.h"; sourceTree = "<group>"; };
+		89FF1C652AFC71300026081D /* NSNumber+ConvenienceAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNumber+ConvenienceAdditions.swift"; sourceTree = "<group>"; };
 		A50693E124C7298500FFF08B /* Credit Card Fraud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Credit Card Fraud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50693E324C7298500FFF08B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A50693E424C7298500FFF08B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -693,11 +696,13 @@
 		897C41E52AA3847B00945609 /* Bitwise operations */ = {
 			isa = PBXGroup;
 			children = (
+				89FF1C602AFC6B670026081D /* Categories */,
 				89FF1C4E2AAA76620026081D /* Manager */,
 				897C41E62AA3847B00945609 /* AppDelegate.h */,
 				897C41E72AA3847B00945609 /* AppDelegate.m */,
 				897C41E92AA3847B00945609 /* ViewController.h */,
 				897C41EA2AA3847B00945609 /* ViewController.mm */,
+				89FF1C642AFC71300026081D /* Bitwise operations-Bridging-Header.h */,
 				897C41EC2AA3847F00945609 /* Assets.xcassets */,
 				897C41EE2AA3847F00945609 /* Main.storyboard */,
 				897C41F12AA3847F00945609 /* Info.plist */,
@@ -716,6 +721,14 @@
 				89FF1C502AAE7A070026081D /* FHEBitwiseObject.mm */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		89FF1C602AFC6B670026081D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				89FF1C652AFC71300026081D /* NSNumber+ConvenienceAdditions.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		A50693E224C7298500FFF08B /* Credit Card Fraud */ = {
@@ -1485,6 +1498,9 @@
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = IBM;
 				TargetAttributes = {
+					897C45802AA3A2B700945609 = {
+						LastSwiftMigration = 1170;
+					};
 					A50693E024C7298500FFF08B = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -1610,6 +1626,7 @@
 				897C45942AA3A2B700945609 /* HelayersTimer.cpp in Sources */,
 				897C45962AA3A2B700945609 /* CTile.cpp in Sources */,
 				897C45972AA3A2B700945609 /* HelibCkksCiphertext.cpp in Sources */,
+				89FF1C662AFC71300026081D /* NSNumber+ConvenienceAdditions.swift in Sources */,
 				897C45982AA3A2B700945609 /* PTile.cpp in Sources */,
 				897C45992AA3A2B700945609 /* HelibCkksContext.cpp in Sources */,
 				897C459B2AA3A2B700945609 /* HelibBgvPlaintext.cpp in Sources */,
@@ -1796,6 +1813,7 @@
 				CLANG_ANALYZER_USE_AFTER_MOVE = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
@@ -1836,6 +1854,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.bitwise-operations.fhe-toolkit-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bitwise operations/Bitwise operations-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/include",
 					"$(PROJECT_DIR)/\"Privacy Preserving Search\"/**",
@@ -1851,6 +1872,7 @@
 				CLANG_ANALYZER_USE_AFTER_MOVE = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
@@ -1892,6 +1914,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.bitwise-operations.fhe-toolkit-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bitwise operations/Bitwise operations-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/include",
 					"$(PROJECT_DIR)/\"Privacy Preserving Search\"/**",

@@ -19,7 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSArray *)decrypt;
 - (std::vector<CTile>)getEncryptedBits;
 
+- (void)diffOther:(FHEBitwiseObject *)other;
 - (void)summWithOther:(FHEBitwiseObject *)other;
+- (void)multiplyWithOther:(FHEBitwiseObject *)other;
+- (void)divideByOther:(FHEBitwiseObject *)other;
 
 @end
 
