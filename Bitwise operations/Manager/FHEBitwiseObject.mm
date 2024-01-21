@@ -107,7 +107,76 @@ using namespace std;
 }
 
 - (void)divideByOther:(FHEBitwiseObject *)other {
+    // remainder = [a0, a0, a0, ....]
+    // remainder = [a0, ...., a1]
+    // res = reminder - B
+    // c0 = not(res0 xor b0)
+    // c = c + 1
+    Encoder encoder(*[self getHe]);
+    CTile aSignBit = encryptedBits[0];
+    vector<CTile> remainderBits(encryptedBits.size(), aSignBit);
+    vector<CTile> resultBits;
+    // helper bit to inverse encrypted bits
+    CTile inverseBit(*[self getHe]);
+    encoder.encodeEncrypt(inverseBit, vector<int>{1});
     
+    // result sign = a0 xor b0
+    CTile resultSign = aSignBit;
+    resultSign.add(other.getEncryptedBits[0]);
+    resultBits.push_back(resultSign);
+    
+    // result bits
+    for(int i = 1; i < encryptedBits.size() + 1; i++) {
+        remainderBits.erase(remainderBits.begin());
+        if (i < encryptedBits.size()) {
+            remainderBits.push_back(encryptedBits[i]);
+        } else {
+            CTile additionalBit(*[self getHe]);
+            encoder.encodeEncrypt(additionalBit, vector<int>{0});
+            remainderBits.push_back(additionalBit);
+        }
+        FHEBitwiseObject *remainder = [[FHEBitwiseObject alloc] initWithEncriptedBits:remainderBits];
+        // diff if signs are the same, sum otherwise
+        // sum mode 0, diff mode 1, so just not(r0 xor bo)
+        CTile modeBit = remainder.getEncryptedBits[0];
+        modeBit.add(other.getEncryptedBits[0]);
+        modeBit.add(inverseBit);
+        
+        [remainder summOrDiffWithOther:other encMode:modeBit];
+        CTile resultBit = remainder.getEncryptedBits[0];
+        resultBit.add(other.getEncryptedBits[0]);
+        resultBit.add(inverseBit);
+        resultBits.push_back(resultBit);
+        // restore remainder if needed
+        // a or b = (a and b) xor a xor b
+        // (a0 xor remainder0) and old_remainderBits or not(a0 xor remainder0) and new_remainderBits
+        CTile notEqBit = encryptedBits[0];
+        notEqBit.add(remainder.getEncryptedBits[0]);
+        CTile eqBit = notEqBit;
+        eqBit.add(inverseBit);
+        
+        vector<CTile> correctedRemainderBits;
+        for(int j = 0; j < remainderBits.size(); j++) {
+            CTile left = remainderBits[j];
+            left.multiply(notEqBit);
+            
+            CTile right = remainder.getEncryptedBits[j];
+            right.multiply(eqBit);
+            
+            CTile bit = left;
+            bit.multiply(right);
+            bit.add(left);
+            bit.add(right);
+            correctedRemainderBits.push_back(bit);
+        }
+        remainderBits = correctedRemainderBits;
+    }
+    FHEBitwiseObject *one = [[FHEBitwiseObject alloc] initWithBits:[@1 binaryRepresentationWith:resultBits.size()]];
+    FHEBitwiseObject *result = [[FHEBitwiseObject alloc] initWithEncriptedBits:resultBits];
+    [result summWithOther:one];
+    resultBits = result.getEncryptedBits;
+    resultBits.pop_back();
+    encryptedBits = resultBits;
 }
 
 - (void)diffOther:(FHEBitwiseObject *)other {
