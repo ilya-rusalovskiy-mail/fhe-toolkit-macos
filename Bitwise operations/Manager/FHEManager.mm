@@ -113,4 +113,12 @@ unsigned long debug = 1;
     return &he;
 }
 
+- (void)invertBit:(CTile)bit {
+    Encoder encoder(*[self getContext]);
+    // helper bit to inverse encrypted bits
+    CTile inverseBit(*[self getContext]);
+    encoder.encodeEncrypt(inverseBit, vector<int>{1});
+    bit.add(inverseBit);
+}
+
 @end

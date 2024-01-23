@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FHEBitwiseObject : NSObject
 
 - (instancetype)initWithBits:(NSArray *)bits;
+- (instancetype)initWithEncriptedBits:(std::vector<CTile>)bits;
 - (NSArray *)decrypt;
 - (std::vector<CTile>)getEncryptedBits;
 
@@ -23,6 +24,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)summWithOther:(FHEBitwiseObject *)other;
 - (void)multiplyWithOther:(FHEBitwiseObject *)other;
 - (void)divideByOther:(FHEBitwiseObject *)other;
+
+- (CTile)compareWithOther:(FHEBitwiseObject *)other;
+- (FHEBitwiseObject *)chooseOneWithOther:(FHEBitwiseObject *)other basedOnBit:(CTile)bit;
+- (void)multiplyWithBit:(CTile)bit;
+
 
 @end
 

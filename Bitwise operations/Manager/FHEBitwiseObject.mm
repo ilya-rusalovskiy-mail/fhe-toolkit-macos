@@ -56,6 +56,43 @@ using namespace std;
     }
 }
 
+- (CTile)compareWithOther:(FHEBitwiseObject *)other {
+    Encoder encoder(*[self getHe]);
+    CTile result(*[self getHe]);
+    encoder.encodeEncrypt(result, vector<int>{1});
+    
+    // helper bit to inverse encrypted bits
+    CTile inverseBit(*[self getHe]);
+    encoder.encodeEncrypt(inverseBit, vector<int>{1});
+    
+    for(int i = 0; i < encryptedBits.size(); i++) {
+        CTile notAXorB = encryptedBits[i];
+        notAXorB.add(other.getEncryptedBits[i]);
+        notAXorB.add(inverseBit);
+        result.multiply(notAXorB);
+    }
+    
+    return result;
+}
+
+- (FHEBitwiseObject *)chooseOneWithOther:(FHEBitwiseObject *)other basedOnBit:(CTile)bit {
+    Encoder encoder(*[self getHe]);
+    // helper bit to inverse encrypted bits
+    CTile inverseBit(*[self getHe]);
+    encoder.encodeEncrypt(inverseBit, vector<int>{1});
+    // create copies
+    FHEBitwiseObject *aCopy = [[FHEBitwiseObject alloc] initWithEncriptedBits:encryptedBits];
+    FHEBitwiseObject *bCopy = [[FHEBitwiseObject alloc] initWithEncriptedBits:other.getEncryptedBits];
+    // create other condition
+    CTile notBit = bit;
+    notBit.add(inverseBit);
+    [aCopy multiplyWithBit:bit];
+    [bCopy multiplyWithBit:notBit];
+    [aCopy summWithOther:bCopy];
+    
+    return aCopy;
+}
+
 - (void)rShiftPositions:(int)positions {
     if (positions < 1) {
         // do nothing

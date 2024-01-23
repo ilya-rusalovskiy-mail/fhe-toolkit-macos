@@ -58,6 +58,7 @@
 		89FF1C4C2AAA76410026081D /* FHEManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89FF1C4B2AAA76410026081D /* FHEManager.mm */; };
 		89FF1C512AAE7A070026081D /* FHEBitwiseObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89FF1C502AAE7A070026081D /* FHEBitwiseObject.mm */; };
 		89FF1C662AFC71300026081D /* NSNumber+ConvenienceAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FF1C652AFC71300026081D /* NSNumber+ConvenienceAdditions.swift */; };
+		89FF1C6A2B5D55250026081D /* GaussianElimination.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89FF1C692B5D55250026081D /* GaussianElimination.mm */; };
 		A50693E524C7298500FFF08B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A50693E424C7298500FFF08B /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A50693EA24C7298A00FFF08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50693E924C7298A00FFF08B /* Assets.xcassets */; };
 		A50693ED24C7298A00FFF08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50693EB24C7298A00FFF08B /* Main.storyboard */; };
@@ -248,6 +249,8 @@
 		89FF1C502AAE7A070026081D /* FHEBitwiseObject.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FHEBitwiseObject.mm; sourceTree = "<group>"; };
 		89FF1C642AFC71300026081D /* Bitwise operations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bitwise operations-Bridging-Header.h"; sourceTree = "<group>"; };
 		89FF1C652AFC71300026081D /* NSNumber+ConvenienceAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNumber+ConvenienceAdditions.swift"; sourceTree = "<group>"; };
+		89FF1C682B5D55030026081D /* GaussianElimination.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GaussianElimination.h; sourceTree = "<group>"; };
+		89FF1C692B5D55250026081D /* GaussianElimination.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GaussianElimination.mm; sourceTree = "<group>"; };
 		A50693E124C7298500FFF08B /* Credit Card Fraud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Credit Card Fraud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50693E324C7298500FFF08B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A50693E424C7298500FFF08B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -696,6 +699,7 @@
 		897C41E52AA3847B00945609 /* Bitwise operations */ = {
 			isa = PBXGroup;
 			children = (
+				89FF1C672B5D54A50026081D /* Examples */,
 				89FF1C602AFC6B670026081D /* Categories */,
 				89FF1C4E2AAA76620026081D /* Manager */,
 				897C41E62AA3847B00945609 /* AppDelegate.h */,
@@ -729,6 +733,15 @@
 				89FF1C652AFC71300026081D /* NSNumber+ConvenienceAdditions.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		89FF1C672B5D54A50026081D /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				89FF1C682B5D55030026081D /* GaussianElimination.h */,
+				89FF1C692B5D55250026081D /* GaussianElimination.mm */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		A50693E224C7298500FFF08B /* Credit Card Fraud */ = {
@@ -1630,6 +1643,7 @@
 				897C45982AA3A2B700945609 /* PTile.cpp in Sources */,
 				897C45992AA3A2B700945609 /* HelibCkksContext.cpp in Sources */,
 				897C459B2AA3A2B700945609 /* HelibBgvPlaintext.cpp in Sources */,
+				89FF1C6A2B5D55250026081D /* GaussianElimination.mm in Sources */,
 				897C45BD2AA3A5A400945609 /* AppDelegate.m in Sources */,
 				89FF1C512AAE7A070026081D /* FHEBitwiseObject.mm in Sources */,
 				897C459C2AA3A2B700945609 /* HelibBgvNativeFunctionEvaluator.cpp in Sources */,
