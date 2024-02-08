@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892A628E2B740D360039CCC7 /* MathTesting.mm in Sources */ = {isa = PBXBuildFile; fileRef = 892A628D2B740D360039CCC7 /* MathTesting.mm */; };
 		897C45832AA3A2B700945609 /* HelibCkksEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E0525D1EA8D0063303B /* HelibCkksEncoder.cpp */; };
 		897C45842AA3A2B700945609 /* AbstractEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151E8625D1EC880063303B /* AbstractEncoder.cpp */; };
 		897C45852AA3A2B700945609 /* NativeFunctionEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5151D7525D1E9910063303B /* NativeFunctionEvaluator.cpp */; };
@@ -233,6 +234,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		892A628C2B740D1C0039CCC7 /* MathTesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathTesting.h; sourceTree = "<group>"; };
+		892A628D2B740D360039CCC7 /* MathTesting.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MathTesting.mm; sourceTree = "<group>"; };
 		897C41E62AA3847B00945609 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		897C41E72AA3847B00945609 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		897C41E92AA3847B00945609 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -740,6 +743,8 @@
 			children = (
 				89FF1C682B5D55030026081D /* GaussianElimination.h */,
 				89FF1C692B5D55250026081D /* GaussianElimination.mm */,
+				892A628C2B740D1C0039CCC7 /* MathTesting.h */,
+				892A628D2B740D360039CCC7 /* MathTesting.mm */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -1651,6 +1656,7 @@
 				897C459F2AA3A2B700945609 /* Encoder.cpp in Sources */,
 				897C45A02AA3A2B700945609 /* HelayersConfig.cpp in Sources */,
 				897C45A12AA3A2B700945609 /* AbstractCiphertext.cpp in Sources */,
+				892A628E2B740D360039CCC7 /* MathTesting.mm in Sources */,
 				897C45A32AA3A2B700945609 /* AbstractFunctionEvaluator.cpp in Sources */,
 				897C45A42AA3A2B700945609 /* FileUtils.cpp in Sources */,
 				897C45A52AA3A2B700945609 /* HelibCkksPlaintext.cpp in Sources */,

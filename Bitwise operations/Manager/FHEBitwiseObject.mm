@@ -56,14 +56,20 @@ using namespace std;
     }
 }
 
+- (CTile)getInverseBit {
+    Encoder encoder(*[self getHe]);
+    CTile inverseBit(*[self getHe]);
+    encoder.encodeEncrypt(inverseBit, vector<int>{1});
+    return inverseBit;
+}
+
 - (CTile)compareWithOther:(FHEBitwiseObject *)other {
     Encoder encoder(*[self getHe]);
     CTile result(*[self getHe]);
     encoder.encodeEncrypt(result, vector<int>{1});
     
     // helper bit to inverse encrypted bits
-    CTile inverseBit(*[self getHe]);
-    encoder.encodeEncrypt(inverseBit, vector<int>{1});
+    CTile inverseBit = [self getInverseBit];
     
     for(int i = 0; i < encryptedBits.size(); i++) {
         CTile notAXorB = encryptedBits[i];
@@ -150,15 +156,16 @@ using namespace std;
     // c0 = not(res0 xor b0)
     // c = c + 1
     Encoder encoder(*[self getHe]);
-    CTile aSignBit = encryptedBits[0];
-    vector<CTile> remainderBits(encryptedBits.size(), aSignBit);
+    vector<CTile> remainderBits;
+    for (int i = 0; i < encryptedBits.size(); i++) {
+        CTile aSignBit = encryptedBits[0];
+        remainderBits.push_back(aSignBit);
+    }
     vector<CTile> resultBits;
-    // helper bit to inverse encrypted bits
-    CTile inverseBit(*[self getHe]);
-    encoder.encodeEncrypt(inverseBit, vector<int>{1});
+    CTile inverseBit = [self getInverseBit];
     
     // result sign = a0 xor b0
-    CTile resultSign = aSignBit;
+    CTile resultSign = encryptedBits[0];
     resultSign.add(other.getEncryptedBits[0]);
     resultBits.push_back(resultSign);
     
@@ -252,11 +259,18 @@ using namespace std;
         CTile aAndB = a;
         aAndB.multiply(b);
 
-        CTile c = aXorB;
+        CTile c = CTile(aXorB);
         c.add(p);
         // result bit
         result.push_back(c);
 
+        // hack
+        vector<int> encoded = encoder.decryptDecodeInt(p);
+        CTile pCopy(*[self getHe]);
+        encoder.encodeEncrypt(pCopy, encoded);
+        // end hack
+        
+        p = pCopy;
         aXorB.multiply(p);
         aXorB.add(aAndB);
         if (i == 0) {

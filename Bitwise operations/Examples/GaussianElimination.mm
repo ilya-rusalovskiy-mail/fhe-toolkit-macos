@@ -124,4 +124,13 @@
     NSLog(@"Straight stroke result: %@", testArray);
 }
 
+- (void)printCurrentResults:(NSArray<FHEBitwiseObject *> *)results {
+    NSMutableArray<NSNumber *> *decResults = [[NSMutableArray alloc] init];
+    for (FHEBitwiseObject *result in results) {
+        NSNumber *decResult = [NSNumber buildFromBitsArray:[result decrypt]];
+        [decResults addObject:decResult];
+    }
+    NSLog(@"Result is: %@", decResults);
+}
+
 @end
